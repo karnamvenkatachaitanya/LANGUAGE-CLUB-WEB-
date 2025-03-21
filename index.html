@@ -44,6 +44,14 @@
       opacity: 0;
       animation: fadeIn 1.5s ease-in-out forwards;
     }
+    .clublogo{
+      position:static;
+      top: 30px;
+      left: 30px;
+      width: 300px;
+      height: auto;
+
+    }
     .logo {
       position: absolute;
       top: 10px;
@@ -109,7 +117,7 @@
     </video>
   </div>
   <div class="content">
-    Welcome to My Website
+    <img src="clublogo.png" alt="clublogo" class="clublogo" />
   </div>
   <div class="nav-buttons">
     <button class="parallelogram"><span>Home</span></button>
@@ -119,7 +127,7 @@
     <button class="parallelogram"><span>More</span></button>
   </div>
   <script>
-    let videos = ["video1.mp4", "video2.mp4"];
+    let videos = ["video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4"];
     let index = 0;
     let videoElement = document.getElementById("bgVideo");
     setInterval(() => {
