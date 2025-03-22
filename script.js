@@ -1,5 +1,5 @@
 // script.js
-let videos = ["video1.mp4", "video2.mp4"];
+let videos = ["video1.mp4", "video2.mp4", "video3.mp4", "video3.mp4"];
 let index = 0;
 let videoElement = document.getElementById("bgVideo");
 setInterval(() => {
