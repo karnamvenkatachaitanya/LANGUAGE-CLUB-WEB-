@@ -1,0 +1,42 @@
+/* Custom Gradient Animation */
+@keyframes gradientGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); }
+    100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+}
+
+.gradient-bg {
+    background: linear-gradient(
+        135deg,
+        #ff0000, /* Bright red */
+        #b30000, /* Deep red */
+        #4b0000, /* Dark red */
+        #1a0000, /* Near black-red */
+        #000000  /* Pure black */
+    );
+    background-size: 300% 300%;
+    animation: gradientGlow 10s ease infinite;
+}
+
+.glow-text {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+.back-to-top {
+    animation: pulseGlow 2s infinite;
+}
