@@ -68,6 +68,7 @@ body { font-family: Arial, sans-serif; background-color: #000; color: #fff; }
   animation: fadeIn 1.2s ease-in-out;
 }
 
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -182,22 +183,26 @@ body { font-family: Arial, sans-serif; background-color: #000; color: #fff; }
 .animated-btn:active {
   transform: scale(0.95);
 }
-.container { width: 80%;margin: 0 auto;position: relative;}
+.container { width: 80%;margin: 0 auto;position: relative;padding: 10px;}
 :root {--grid-rotation: 30deg;--grid-margin-right: 5%;}
 /* Grid Layout */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, auto);
-  gap:20px;
-  transform: rotate(30deg);
-  margin-top: 5%;
-  margin-left: 65%; /* Shift the grid to the left */
+  gap:10px;
+  transform: rotate(35deg);
+  margin-top: 13%;
+  margin-left: 70%; /* Shift the grid to the left */
   grid-template-areas:
     "home home"
     "more about"
     "events panel"
     "execom execom";
+}
+.grid-container {
+  margin: 40px auto;
+  width: 80%;
 }
 
 .grid .home { grid-area: home; justify-self: center; }
@@ -207,13 +212,30 @@ body { font-family: Arial, sans-serif; background-color: #000; color: #fff; }
 .grid .panel { grid-area: panel; }
 .grid .execom { grid-area: execom; justify-self: center; }
 /* Parallelogram Button Style */
+/*.parallelogram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 80px;
+  background: linear-gradient(135deg, #f94679, #2c62ea);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.4s, box-shadow 0.4s, background 0.5s;
+  transform: skew(-30deg);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  animation: slideInFromCenter 0.8s ease-out forwards;
+}*/
+
 .parallelogram {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 180px;
   height: 80px;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  background: linear-gradient(135deg, #f94679, #2c62ea);
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -229,7 +251,7 @@ body { font-family: Arial, sans-serif; background-color: #000; color: #fff; }
 }
 
 .parallelogram:hover {
-  transform: scale(1.1) skew(-20deg);
+  transform: scale(1.1) skew(120deg);
   background: linear-gradient(135deg, #1e90ff, #00c6ff);
   box-shadow: 0 15px 25px rgba(0, 198, 255, 0.7);
 }
@@ -237,101 +259,94 @@ body { font-family: Arial, sans-serif; background-color: #000; color: #fff; }
 .nav-prev, .nav-next { background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; }
 .nav-dots { display: flex; gap: 10px; margin: 0 20px; }
 .nav-btn { width: 10px; height: 10px; background: #fff; border-radius: 50%; cursor: pointer; }
-.nav-btn.active { background: #007bff; }
+.nav-btn.active { background: #0a039a; }
 .social-icons { position: absolute; bottom: 5%; right: 5%; display: flex; gap: 20px; z-index: 2; }
 .social-icons a { color: #fff; font-size: 1.5rem; text-decoration: none; }
 .section { padding: 50px; text-align: center; }
-@media (max-width: 768px) {
-  .container {
-    width: 15%;
-    padding: 25px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(-30deg) perspective(1000px);
-    transform-origin: center center;
-    height: auto;
-    margin: 30px auto;
-    position: relative;
-    background: linear-gradient(15deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-    border-radius: 12px;
-    overflow: visible;
-  }
-
-  .top-row-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 14px;
-    padding: 8px 16px;
-    transform: rotate(5deg);
-    background-color: red;
-    color: white;
-    border-radius: 8px;
-  }
-
-  .nav-button {
-    font-size: 16px;
-    padding: 12px 20px;
-    margin-bottom: 15px;
-    transform: rotate(5deg);
-    background-color: red;
-    color: white;
-    border-radius: 8px;
-  }
-
-  .action-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 0 10px;
-  }
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  .parallelogram:hover {
-    transform: none; /* No hover effect */
-  }
-  .parallelogram:active {
-    transform: scale(0.95); /* Simple press effect */
-  }
+/* Header styling for mobile */
+.mobile-header {
+  background: #333;
+  padding: 10px 20px;
 }
-  /* Grid: Single column with improved spacing */
-    @media (max-width: 768px) {
-      .grid {
-        flex-wrap: wrap;
-      }
-      /* Grid items styling */
-      .grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px; /* Smaller gap for vertical layout */
-      }
-      .grid > * {
-        max-width: none; /* Or set to 280px */
-      }
-      /* Parallelogram button adjustments */
-      .parallelogram {
-        min-width: 70px; /* Or wider, e.g., 120px */
-        padding: 30 15px; /* Adds extra tappable space */
-        height: 65px; /* Already sufficient */
-      }
-    
-      /* Remove transform effects */
-      .parallelogram span {
-        transform: none !important;
-        white-space: nowrap; /* Prevent text wrapping */
-      }
-    }
 
-  /* Optional: remove or reduce hover transform on mobile for simpler UX */
-  .parallelogram:hover {
-    transform: scale(1.02) skew(-20deg);
-  }
+/* Hamburger menu container */
+.mobile-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
 
-  /* If you want a pressed/tap effect on mobile */
-  .parallelogram:active {
-    transform: scale(0.98) skew(-20deg);
-  }
+/* Hamburger icon styling */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile navigation (initially hidden) */
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* When the menu is open */
+.mobile-nav.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Mobile navigation item styling */
+.mobile-nav-item {
+  display: block;
+  width: 90%;
+  padding: 12px 20px;
+  margin: 5px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, #ff416c, #3971fd);
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover/tap effects */
+.mobile-nav-item:hover {
+  background: linear-gradient(135deg, #1e90ff, #00c6ff);
+  transform: scale(1.02);
+}
+
   
         /* Custom Gradient Animation */
         @keyframes gradientGlow {
@@ -369,4 +384,80 @@ body { font-family: Arial, sans-serif; background-color: #000; color: #fff; }
       .back-to-top {
           animation: pulseGlow 2s infinite;
       }
+
+/* Fade Effect on Left Side */
+.slide::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%; /* Adjust width of the fade */
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 2;
+/* animation: imageMove 4s ease-in-out infinite;*/
+}
+/* Keyframes for sliding in from left */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to main content */
+.animate-from-left {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+/* Content Section Styling */
+.cont{
+  margin-bottom: 30px;
+}
+
+/* Animated button styling */
+.animated-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.animated-btn:hover {
+  background-color: #0056b3;
+}
+@keyframes slideInFromCenter {
+  0% {
+    /* Start shifted from the center (50vw from its final position) and invisible */
+    transform: translateX(50vw) skew(-30deg);
+    opacity: 0;
+  }
+  100% {
+    /* End at its original grid position */
+    transform: translateX(0) skew(-30deg);
+    opacity: 1;
+  }
+}
+
+/* Staggered animation delays for sequential effect */
+.grid .parallelogram:nth-child(1) { animation-delay: 0.2s; }
+.grid .parallelogram:nth-child(2) { animation-delay: 0.4s; }
+.grid .parallelogram:nth-child(3) { animation-delay: 0.6s; }
+.grid .parallelogram:nth-child(4) { animation-delay: 0.8s; }
+.grid .parallelogram:nth-child(5) { animation-delay: 1s; }
+.grid .parallelogram:nth-child(6) { animation-delay: 1.2s; }
+
+/* Hover Effects for Enhanced Interactivity */
+.parallelogram:hover {
+  transform: scale(1.05) skew(-17deg);
+  background: linear-gradient(135deg, #1e90ff, #00c6ff);
+  box-shadow: 0 15px 25px rgba(0, 198, 255, 0.7);
+}
 
