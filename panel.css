@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&family=Roboto:wght@500&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   border: none;
+   box-sizing: border-box;
+   outline: none;
+   transition: all .5s linear;
+   font-family: 'Montserrat',sans-serif;
+}
+.main-container{
+   width: 100%;
+   height: auto;
+   padding: 30px 4%;
+   /*z-index: 999999;*/
+   grid-template-columns: repeat(3,300px);
+}
+.main-container h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Roboto' sans-serif;
+    padding-bottom: 15px;
+    pad: 100px;
+
+
+}
+.main1-container{
+    width: 100%;
+    height: auto;
+    padding: 30px 4%;
+    /*z-index: 999999;*/
+    grid-template-columns: repeat(3,300px);
+ }
+.sub-container {
+    display: flex;
+    padding: auto;
+    justify-content: center; /* Centers boxes in row */
+    gap : 100px; /* Space between boxes */
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+}
+/*.box{
+    width: 500px;
+    height: 400px;
+    width: auto;
+    background-color: rgb(215, 18, 18);
+}*/
+.box{
+    position: relative;
+    width: auto;
+    height: 400px;
+    background-color: rgb(215, 18, 18);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 50px 50px 50px 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: auto ;
+    height: 400px;
+    border-radius: 50px 50px 50px 50px;
+    background: linear-gradient(-45deg, #d3c6c6 0%, #e61a24 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.185, 0.745, 0.200, 0.900);
+  }
+  .box::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  .heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  
+  .box p:not(.heading) {
+    font-size: 14px;
+  }
+  
+  .box p:last-child {
+    color: #a00e33;
+    font-weight: 600;
+  }
+  
+  .box:hover::after {
+    filter: blur(30px);
+  }
+  .box:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+  }
+
+  
+.image{
+    width: 150px;
+    height: 150px;
+    border-radius: 50% 50% 0% 0%;
+    overflow: hidden;
+    margin: auto;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    width:250px;
+    height: 250px;
+    padding: 10px 20px;
+    border-radius: 0% 0% 50% 50%;
+    background-color: rgb(203, 79, 79);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content ul li {
+    list-style-type: none;
+    color: rgb(223, 213, 213);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: pointer;
+}
+.content ul li ion-icon{
+    padding: 5px;
+    color: aqua;
+}
+.content h3{
+    font-size: 25px;
+    color: rgb(215, 215, 215);
+    font-family: 'Montserrat',sans-serif;
+
+}
+.content span{
+   font-size: 13px;
+   font-family: 'Montserrat',sans-serif;
+}
+.box:hover{
+    transform: scale(1.05);
+    background-color: rgb(103, 24, 28);
+
+}
+.content::shadow{
+    transform: matrix3d(1.5);
+}
+.table-container {
+    width: 90%;
+    margin: 150px auto 120px auto;
+    /* Add space from top */
+    background: #de3942;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(221, 123, 123, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.gradient-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.gradient-table thead {
+    background: linear-gradient(to right, #d31616, #da95a9);
+    color: white;
+}
+
+.gradient-table th,
+.gradient-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    animation: slideIn 1s ease-in-out;
+    color: white;
+}
+
+.gradient-table tbody tr:nth-child(odd) {
+    background: linear-gradient(to right, #a92232, #f1949c);
+}
+
+.gradient-table tbody tr:nth-child(even) {
+    background: linear-gradient(to right, #dd7f7f, #f33f3f);
+}
+
+.gradient-table tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
