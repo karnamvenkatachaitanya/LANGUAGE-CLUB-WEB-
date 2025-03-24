@@ -460,4 +460,6 @@ body { font-family: Arial, sans-serif; background-color: #000; color: #fff; }
   background: linear-gradient(135deg, #1e90ff, #00c6ff);
   box-shadow: 0 15px 25px rgba(0, 198, 255, 0.7);
 }
-
+.parallelogram :nth-child(6){
+  margin-right: 50px;
+}
