@@ -1,3 +1,4 @@
+
 "use strict";
 // script.js (unchanged from original for Version 1)
 
@@ -47,7 +48,7 @@ backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-document.querySelector('.back-to-top').addEventListener('click', function(e) {
+document.querySelector('.back-to-top').addEventListener('click', function (e) {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
