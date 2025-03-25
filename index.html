@@ -1,13 +1,16 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LanguageClub NBKRIST</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
+
 <body>
   <header class="header-bar">
     <img src="logo.png" alt="Logo" class="logo" />
@@ -16,39 +19,53 @@
   </header>
 
   <section class="home" id="home">
-    <div class="video-slides">
-      <video class="video-slide active" src="video1.mp4" autoplay muted loop></video>
-      <video class="video-slide" src="video2.mp4" autoplay muted loop></video>
-      <video class="video-slide" src="video3.mp4" autoplay muted loop></video>
-      <video class="video-slide" src="video4.mp4" autoplay muted loop></video>
+    <div class="slide">
+      <div class="video-slides">
+        <video class="video-slide active" src="video1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video4.mp4" autoplay muted loop></video>
+      </div>
+    </div>
+    <div class="button-container">
+      <a class="button" href="#home"><i class="fas fa-home"></i></a>
+      <a class="button" href="#about"><i class="fas fa-info-circle"></i></a>
+      <a class="button" href="#events"><i class="fas fa-calendar-alt"></i></a>
+      <a class="button" href="#panel"><i class="fas fa-users"></i></a>
+      <a class="button" href="#execom"><i class="fas fa-user-tie"></i></a>
+      <a class="button" href="#more"><i class="fas fa-ellipsis-h"></i></a>
     </div>
 
     <div class="slider-contents">
       <div class="content active">
+        <main class="animate-from-left">
           <h1>LanguageClub NBKRIST</h1>
           <h2>Where Curiosity Meets Technology</h2>
-          <p>Welcome to the heart of collaboration and innovation at LanguageClub NBKRIST. We’re creators, collaborators, and changemakers.</p>
+          <p>Welcome to the heart of collaboration and innovation at LanguageClub NBKRIST. We’re creators,
+            collaborators, and changemakers.</p>
           <button class="animated-btn">Join Club</button>
-                </div>
-      <div class="content">
-          <h2>We Work Through</h2>
-          <h1>Collaboration</h1>
-          <p>At LanguageClub NBKRIST, collaboration drives us. We unite students, professionals, and experts to share ideas and innovate.</p>
-          <button class="animated-btn">Join Club</button>     
-           </div>
-      <div class="content">
-          <h2>Grow, Connect,</h2>
-          <h1>Build Networks</h1>
-          <p>Join us to enhance your skills, connect with peers, and build networks in a dynamic environment.</p>
-          <button class="animated-btn">Join Club</button>
+        </main>
       </div>
       <div class="content">
-          <h2>Leadership</h2>
-          <h1>LanguageClub NBKRIST</h1>
-          <p>We foster leadership through tech knowledge and self-improvement. Lead impactful projects with us.</p>
-            <button class="animated-btn">Join Club</button>
+        <h2>We Work Through</h2>
+        <h1>Collaboration</h1>
+        <p>At LanguageClub NBKRIST, collaboration drives us. We unite students, professionals, and experts to share
+          ideas and innovate.</p>
+        <button class="animated-btn">Join Club</button>
       </div>
-  </div>
+      <div class="content">
+        <h2>Grow, Connect,</h2>
+        <h1>Build Networks</h1>
+        <p>Join us to enhance your skills, connect with peers, and build networks in a dynamic environment.</p>
+        <button class="animated-btn">Join Club</button>
+      </div>
+      <div class="content">
+        <h2>Leadership</h2>
+        <h1>LanguageClub NBKRIST</h1>
+        <p>We foster leadership through tech knowledge and self-improvement. Lead impactful projects with us.</p>
+        <button class="animated-btn">Join Club</button>
+      </div>
+    </div>
     </div>
 
     <div class="container">
@@ -72,19 +89,12 @@
       </div>
       <button class="nav-next" onclick="nextSlide()">&#10095;</button>
     </div>
-
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
   </section>
 
   <section id="about" class="section">
     <h2>About LanguageClub NBKRIST</h2>
-    <p>LanguageClub NBKRISTis dedicated to fostering innovation and collaboration among students in technology and engineering. We provide opportunities for learning, networking, and leadership.</p>
+    <p>LanguageClub NBKRISTis dedicated to fostering innovation and collaboration among students in technology and
+      engineering. We provide opportunities for learning, networking, and leadership.</p>
   </section>
 
   <section id="events" class="section">
@@ -108,130 +118,100 @@
       <li>Secretary: Alice Johnson</li>
     </ul>
   </section>
-  <title>Language Club Footer</title>
-  <!-- Font Awesome CDN for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <footer class="gradient-bg text-white py-12 px-6 font-sans shadow-2xl relative overflow-hidden">
-      <!-- Glowing Overlay -->
-      <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.2),transparent_60%)] opacity-40 animate-[spin_8s_linear_infinite] pointer-events-none"></div>
+  <!DOCTYPE html>
+  <html lang="en">
 
-      <div class="max-w-6x1 mx-auto grid grid-cols-1 md:grid-cols-3 gap -15 text-center md:text-left transform -rotate-5">
-                          <!-- Quick Links -->
-          <div>
-              <h3 class="text-2xl font-extrabold text-white mb-5 glow-text">Quick Links</h3>
-              <ul class="space-y-3">
-                  <li><a href="#home" class="text-white hover:text-gray-300 hover-glow">Home</a></li>
-                  <li><a href="#about" class="text-white hover:text-gray-300 hover-glow">About Us</a></li>
-                  <li><a href="#events" class="text-white hover:text-gray-300 hover-glow">Events</a></li>
-                  <li><a href="#resources" class="text-white hover:text-gray-300 hover-glow">Resources</a></li>
-                  <li><a href="#contact" class="text-white hover:text-gray-300 hover-glow">Contact Us</a></li>
-                  <li><a href="https://nbkrist.co.in/" target="_blank" class="text-white hover:text-gray-300 hover-glow">NBKR IST</a></li>
-                  <li><a href="https://ieeesbnbkrist2k24.netlify.app/" target="_blank" class="text-white hover:text-gray-300 hover-glow">IEEE</a></li>
-              </ul>
-          </div>
-          <!-- Professional Societies -->
-          <div>
-              <h3 class="text-2xl font-extrabold text-white mb-5 glow-text">Professional Societies</h3>
-              <ul class="space-y-3">
-                  <li><a href="https://ieeesbnbkrist2k24.netlify.app/" class="text-white hover:text-gray-300 hover-glow">IEEE</a></li>
-                  <li><a href="#" class="text-white hover:text-gray-300 hover-glow">ISTE</a></li>
-                  <li><a href="#" class="text-white hover:text-gray-300 hover-glow">CSI</a></li>
-                  <li><a href="#" class="text-white hover:text-gray-300 hover-glow">IETE</a></li>
-                  <li><a href="#" class="text-white hover:text-gray-300 hover-glow">IEI</a></li>
-                  <li><a href="#" target="_blank" class="text-white hover:text-gray-300 hover-glow">RSI</a></li>
-                  <li><a href="#" target="_blank" class="text-white hover:text-gray-300 hover-glow">SAE</a></li>
-              </ul>
-          </div>
-          <!-- Clubs -->
-          <div>
-              <h3 class="text-2xl font-extrabold text-white mb-5 glow-text">Clubs</h3>
-              <ul class="space-y-3">
-                  <li><a href="#" class="text-white hover:text-gray-300 hover-glow">Language Club</a></li>
-                  <li><a href="https://nbkrist.co.in/Codingclub.php" class="text-white hover:text-gray-300 hover-glow">Coding Club</a></li>
-                  <li><a href="https://nbkrist.co.in/yogaclub.php" class="text-white hover:text-gray-300 hover-glow">Yoga Club</a></li>
-                  <li><a href="https://nbkrist.co.in/Paintingclub.php" class="text-white hover:text-gray-300 hover-glow">Painting Club</a></li>
-                  <li><a href="https://nbkrist.co.in/Cultural.php" class="text-white hover:text-gray-300 hover-glow">Cultural Club</a></li>
-                  <li><a href="https://nbkrist.co.in/Literaryclub.php" target="_blank" class="text-white hover:text-gray-300 hover-glow">Literary Club</a></li>
-              </ul>
-          </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Club Footer</title>
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
 
-          <!-- Contact Information -->
-         <!-- Parent container: flex layout with responsive ordering -->
-<div class="flex flex-col md:flex-row md:items-start md:gap-10">
+  <body>
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Quick Links -->
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">NBKR IST</a></li>
+          </ul>
+        </div>
 
-  <!-- Contacts section -->
-  <div class="order-1 md:order-1">
-    <h3 class="text-2xl font-extrabold text-white mb-5 glow-text">Contact Us</h3>
-    <ul class="space-y-3">
-      <li class="flex justify-center md:justify-start items-center">
-        <i class="fas fa-phone text-white mr-3 text-lg"></i>
-        <a href="tel:+919441609524" class="text-white hover:text-gray-300 hover-glow">+91 9441609524</a>
-      </li>
-      <li class="flex justify-center md:justify-start items-center">
-        <i class="fas fa-envelope text-white mr-3 text-lg"></i>
-        <a href="mailto:languageclub@nbkrist.org" class="text-white hover:text-gray-300 hover-glow">
-          languageclub@nbkrist.edu
-        </a>
-      </li>
-      <li class="flex justify-center md:justify-start items-center">
-        <i class="fas fa-map-marker-alt text-white mr-3 text-lg"></i>
-        <span class="text-white">
-          NBKR IST, Vidyanagar, Andhra Pradesh, India
-        </span>
-      </li>
-    </ul>
-  </div>
+        <!-- Professional Societies -->
+        <div>
+          <h3>Professional Societies</h3>
+          <ul>
+            <li><a href="#">IEEE</a></li>
+            <li><a href="#">ISTE</a></li>
+            <li><a href="#">CSI</a></li>
+            <li><a href="#">IETE</a></li>
+            <li><a href="#">IEI</a></li>
+          </ul>
+        </div>
 
-  <!-- Follow Us section -->
-  <div class="order-2 md:order-2 mt-8 md:mt-0">
-    <h3 class="text-2xl font-extrabold text-white mb-5 glow-text">Follow Us</h3>
-    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
-      <a href="https://www.instagram.com/languageclubnbkrist?igsh=MXg0dGlmbzIxa2xuMA=="
-         target="_blank"
-         class="text-white hover:text-gray-300 text-3xl transition-all duration-300
-                hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="#"
-         target="_blank"
-         class="text-white hover:text-gray-300 text-3xl transition-all duration-300
-                hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="#"
-         target="_blank"
-         class="text-white hover:text-gray-300 text-3xl transition-all duration-300
-                hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="#"
-         target="_blank"
-         class="text-white hover:text-gray-300 text-3xl transition-all duration-300
-                hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#"
-         target="_blank"
-         class="text-white hover:text-gray-300 text-3xl transition-all duration-300
-                hover:scale-125 hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
-  </div>
-</div>
-</div>
+        <!-- Clubs -->
+        <div>
+          <h3>Clubs</h3>
+          <ul>
+            <li><a href="#">Language Club</a></li>
+            <li><a href="#">Coding Club</a></li>
+            <li><a href="#">Yoga Club</a></li>
+            <li><a href="#">Painting Club</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> <a href="tel:+919441609524">+91 9441609524</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:languageclub@nbkrist.co.in">Email</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> NBKR IST, Andhra Pradesh</li>
+          </ul>
+        </div>
+
+
+      </div>
+
       <!-- Copyright Notice & Back to Top -->
       <div class="text-center mt-10 border-t border-white/30 pt-6">
-          <a href="#top" class="back-to-top inline-flex items-center mb-6 px-5 py-2 bg-white text-gray-900 font-semibold rounded-full shadow-lg hover:bg-gray-200 hover:scale-110 hover:shadow-[0_0_25px_rgba(255,255,255,1)] transition-all duration-300">
-              <i class="fas fa-arrow-up mr-2"></i> Back to Top
-          </a>
-          <h2 class="text-lg text-white drop-shadow-md font-semibold">© 2025 NBKR IST Language Club. All rights reserved.</h2>
+        <a href="#top"
+          class="back-to-top inline-flex items-center mb-6 px-5 py-2 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-black-200 hover:scale-110 hover:shadow-[0_0_25px_rgba(255,255,255,1)] transition-all duration-300">
+          <i class="fas fa-arrow-up mr-2">
+            <p> Back to Top</p>
+          </i>
+        </a>
+        <h2 class="text-lg text-white drop-shadow-md font-semibold">© 2025 NBKR IST Language Club. All rights
+          reserved.
+        </h2>
       </div>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+      <br>
+      <!-- Social Media Links -->
+      <div>
+        <!-- <h3>Follow Us</h3> -->
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+
+  </html>
