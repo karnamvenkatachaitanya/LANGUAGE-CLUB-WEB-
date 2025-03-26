@@ -1,0 +1,97 @@
+/* Updated about.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    text-align: center;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    animation: slideDown 1s ease-out;
+    border-bottom: 4px solid #ffeb3b;
+}
+
+nav ul {
+    list-style: none;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+nav ul li a:hover {
+    color: #ffeb3b;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+section {
+    padding: 50px;
+    margin: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    color: black;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    padding: 15px 30px;
+    background: #2575fc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #6a11cb;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.slide-up {
+    animation: fadeInUp 1.5s ease-in-out;
+}
