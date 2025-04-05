@@ -1120,19 +1120,19 @@ nav ul li a:hover::after {
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 61, 102, 0.08);
   padding: 2rem;
-  max-width: 300px;
+  max-width:auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .panel-card h3 {
   color: #004080;
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 0.6rem;
 }
 
 .panel-card p {
   color: #444;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
 
