@@ -8,24 +8,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body>
-    <header class="header">
-        <div class="container header-container">
-          <!-- 🔹 Logo -->
-          <div class="logo">Language Club</div>
-      
-          <!-- 🔹 Hamburger menu button (mobile only) -->
-          <button id="menu-toggle" class="menu-toggle">&#9776;</button>
-      
-          <!-- 🔹 Desktop nav (visible only in desktop view) -->
-          <ul class="desktop-nav">
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Events">Events</a></li>
-            <li><a href="#panel">Panel</a></li>
-            <li><a href="#More">More</a></li>
+  <header class="header-bar">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <img src="title.png" alt="Title Image" class="title-image" />
+    <div class="nav-container">
+      <nav>
+          <ul class="nav-links">
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#About">About</a></li>
+              <li><a href="#Events">Events</a></li>
+              <li><a href="#panel">panel</a></li>
+              <li><a href="#More">More</a></li>
           </ul>
-        </div>
-    </header>      
+      </nav>
+   </div>
+    <img src="clublogo.png" alt="Club Logo" class="clublogo" />
+  </header>
+
+  <div class="button-container">
+    <a class="button" href="#home"><i class="fas fa-home"></i></a>
+    <a class="button" href="#about"><i class="fas fa-info-circle"></i></a>
+    <a class="button" href="#events"><i class="fas fa-calendar-alt"></i></a>
+    <a class="button" href="#panel"><i class="fas fa-users"></i></a>
+    <a class="button" href="#more"><i class="fas fa-ellipsis-h"></i></a>
+  </div>
 
   <section id="about" class="hero-section">
     <div class="content-container">
@@ -213,24 +219,17 @@
           <li><i class="fas fa-phone text-white mr-3"></i><a href="tel:+919441609524" class="text-white hover:text-gray-300 hover-glow">+91 9441609524</a></li>
           <li><i class="fas fa-envelope text-white mr-3"></i><a href="mailto:languageclub@nbkrist.org" class="text-white hover:text-gray-300 hover-glow">languageclub@nbkrist.edu</a></li>
           <li><i class="fas fa-map-marker-alt text-white mr-3"></i><span class="text-white">NBKR IST, Vidyanagar, AP, India</span></li>
+          <div class="flex space-x-4">
+            <a href="https://www.instagram.com/languageclubnbkrist" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          </div>  
         </ul>
       </div>
-
-      <!-- Social Media -->
-      <div>
-        <h3 class="text-2xl font-extrabold text-white mb-5 glow-text">Follow Us</h3>
-        <div class="flex space-x-5">
-          <a href="https://www.instagram.com/languageclubnbkrist" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
     </div>
-
     <div class="section-footer">
-      <a href="#top" class="back-to-top-btn">Back to Top <i class="fas fa-arrow-up"></i></a>
+      <b href="#top" class="back-to-top-btn">Back to Top <i class="fas fa-arrow-up"></i></b>
       <h5 class="text-lg text-white font-semibold">© 2025 NBKR IST Language Club. All rights reserved.</h5>
     </div>
   </footer>
