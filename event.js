@@ -1,64 +1,54 @@
-// Mobile Menu Toggle
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.getElementById('nav-links');
-mobileMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
 
-/* Slider Logic */
-const slides = document.querySelectorAll('.slide');
-const dotsContainer = document.querySelector('.slideshow-controls');
-const slideshowWrapper = document.querySelector('.slideshow-wrapper');
-let currentIndex = 0;
-let autoSlideInterval;
+"use strict";
+// script.js (unchanged from original for Version 1)
 
-// Create dots for each slide
-slides.forEach((_, index) => {
-  const dot = document.createElement('div');
-  dot.classList.add('control-dot');
-  if (index === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => goToSlide(index));
-  dotsContainer.appendChild(dot);
-});
+const slides = document.querySelectorAll('.video-slide');
+const contents = document.querySelectorAll('.content');
+const navBtns = document.querySelectorAll('.nav-btn');
+let currentSlide = 0;
+let slideInterval = setInterval(() => nextSlide(), 7000);
 
-// Show first slide by default
-slides[currentIndex].classList.add('active');
-
-function goToSlide(index) {
-  slides[currentIndex].classList.remove('active');
-  dotsContainer.children[currentIndex].classList.remove('active');
-  currentIndex = (index + slides.length) % slides.length;
-  slides[currentIndex].classList.add('active');
-  dotsContainer.children[currentIndex].classList.add('active');
-  resetAutoSlide();
+function goToSlide(n) {
+  slides[currentSlide].classList.remove('active');
+  contents[currentSlide].classList.remove('active');
+  navBtns[currentSlide].classList.remove('active');
+  currentSlide = (n + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+  contents[currentSlide].classList.add('active');
+  navBtns[currentSlide].classList.add('active');
 }
 
 function nextSlide() {
-  goToSlide(currentIndex + 1);
+  goToSlide(currentSlide + 1);
 }
+
 function prevSlide() {
-  goToSlide(currentIndex - 1);
-}
-function startAutoSlide() {
-  autoSlideInterval = setInterval(nextSlide, 4000);
-}
-function resetAutoSlide() {
-  clearInterval(autoSlideInterval);
-  startAutoSlide();
+  goToSlide(currentSlide - 1);
 }
 
-document.querySelector('.next-btn').addEventListener('click', nextSlide);
-document.querySelector('.prev-btn').addEventListener('click', prevSlide);
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight') nextSlide();
-  if (e.key === 'ArrowLeft') prevSlide();
+// Pause slider on hover
+const slider = document.querySelector('.home');
+slider.addEventListener('mouseenter', () => {
+  clearInterval(slideInterval);
 });
-slideshowWrapper.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
-slideshowWrapper.addEventListener('mouseleave', startAutoSlide);
-startAutoSlide();
+slider.addEventListener('mouseleave', () => {
+  slideInterval = setInterval(() => nextSlide(), 7000);
+});
 
-// Back-to-Top Smooth Scroll
-document.querySelector('.back-to-top').addEventListener('click', (e) => {
+// Back to Top functionality
+const backToTopButton = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+});
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.querySelector('.back-to-top').addEventListener('click', function (e) {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
