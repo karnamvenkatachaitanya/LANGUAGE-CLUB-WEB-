@@ -54,43 +54,95 @@ body {
 }
 
 /* Navigation */
-.nav-container {
-  flex-grow: 1;
-  text-align: center;
+.nav-toggle {
+  display: none;
 }
-.nav-links {
-  list-style: none;
+
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.nav-toggle-label span {
+  background: #ffeb3b;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle-label span:nth-child(1) {
+  top: 0;
+}
+
+.nav-toggle-label span:nth-child(2) {
+  top: 8px;
+}
+
+.nav-toggle-label span:nth-child(3) {
+  top: 16px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+.nav-container {
+  transition: transform 0.3s ease;
+}
+
+nav ul.nav-links {
   display: flex;
+  list-style: none;
   gap: 25px;
-  justify-content: center;
-  align-items: center;
   margin: 0;
   padding: 0;
 }
-.nav-links li a {
-  color: #b6fcd5;
+
+nav ul li a {
   text-decoration: none;
-  font-weight: 600;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 6px;
   position: relative;
-  transition: color 0.3s ease;
-}
-.nav-links li a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #d0b3ff;
-  transition: width 0.3s ease-in-out;
-}
-.nav-links li a:hover {
-  color: #ffffff;
-}
-.nav-links li a:hover::after {
-  width: 100%;
+  transition: color 0.3s, transform 0.3s;
+  display: block;
 }
 
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #ffeb3b, #ff6f61);
+  transition: width 0.4s ease;
+}
+
+nav ul li a:hover {
+  color: #ffeb3b;
+  transform: translateY(-3px);
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
 /* Home Section */
 .home {
   position: relative;
@@ -460,96 +512,7 @@ body {
   box-shadow: 0 0 25px rgba(255, 255, 255, 1);
 }
 
-/* Navigation */
-.nav-toggle {
-  display: none;
-}
 
-.nav-toggle-label {
-  display: none;
-  cursor: pointer;
-  width: 30px;
-  height: 20px;
-  position: relative;
-}
-
-.nav-toggle-label span {
-  background: #ffeb3b;
-  height: 3px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  transition: all 0.3s ease;
-}
-
-.nav-toggle-label span:nth-child(1) {
-  top: 0;
-}
-
-.nav-toggle-label span:nth-child(2) {
-  top: 8px;
-}
-
-.nav-toggle-label span:nth-child(3) {
-  top: 16px;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 8px;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 8px;
-}
-
-.nav-container {
-  transition: transform 0.3s ease;
-}
-
-nav ul.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 12px;
-  border-radius: 6px;
-  position: relative;
-  transition: color 0.3s, transform 0.3s;
-  display: block;
-}
-
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(to right, #ffeb3b, #ff6f61);
-  transition: width 0.4s ease;
-}
-
-nav ul li a:hover {
-  color: #ffeb3b;
-  transform: translateY(-3px);
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
 
 /* Footer */
 .footer {
@@ -708,10 +671,9 @@ nav ul li a:hover::after {
     display: none;
   }
   .button-container {
-    width: 100%;
+    width: 90%;
     height: auto;
     flex-wrap: wrap;
-    justify-content: center;
     padding: 10px;
   }
   a.button {
@@ -837,7 +799,7 @@ nav ul li a:hover::after {
 
 @media (min-width: 768px) {
   .footer-content {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     text-align: left;
     max-width: 1200px;
   }
