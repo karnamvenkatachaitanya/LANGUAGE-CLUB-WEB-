@@ -27,7 +27,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px;
-  background: rgba(8, 15, 35, 0.7);
+  background: linear-gradient(to right, #4b6b74, #a9b7bd, #dfd9d9);
   backdrop-filter: blur(10px);
   border-bottom: 2px solid rgb(236, 243, 243);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
