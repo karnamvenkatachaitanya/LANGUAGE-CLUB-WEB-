@@ -37,9 +37,13 @@ body {
   z-index: 1000;
 }
 
-.logo,
+.logo {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
 .clublogo {
-  height: 70px;
+  height: 90px;
   width: auto;
   transition: transform 0.3s ease;
 }
