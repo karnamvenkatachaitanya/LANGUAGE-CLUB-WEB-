@@ -636,12 +636,15 @@ nav ul li a:hover::after {
 @media (max-width: 767px) {
   .header-bar {
     height: 60px;
-    padding: 8px;
+    padding: 1px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
-  .logo,
+  .logo  {
+    height: 45px;
+    width: auto;
+  }
   .clublogo {
     height: 55px;
     width: auto;
@@ -753,9 +756,12 @@ nav ul li a:hover::after {
     align-items: center;
     gap: 5px;
   }
-  .logo,
+  .logo{
+    height: 45px;
+    width: auto;
+  }
   .clublogo {
-    height: 50px;
+    height: 60px;
     width: auto;
   }
   .title-image {
