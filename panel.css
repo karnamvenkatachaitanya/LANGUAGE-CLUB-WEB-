@@ -87,7 +87,7 @@ body {
 }
 
 /* Mobile Navigation */
-.button-container {
+.button-container{
     display: flex;
     background-color: rgba(255, 255, 255, 0.1);
     width: 450px;
@@ -245,9 +245,88 @@ body {
     padding: 5px;
     color: #00ffff;
 }
+@media(min-width: 767px)
+{
+  .button-container {
+    display: none;
+  }
+  .title-image{
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header-bar {
+    height: 60px;
+    padding: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .logo,
+  .clublogo {
+    height: 55px;
+    width: auto;
+  }
+  .title-image{
+    height: 40px;
+    width: auto;
+  }
+  .nav-container{
+    display: none;
+  }
+  .responsive-img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+  }
+  
+  .button-container {
+    width: 90%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  a.button {
+    margin: 5px;
+  }
+
+  a.button {
+    margin: 5px;
+    color:#ffffff;
+  }
+  .slide::before{
+    display:none;
+  }
+  .slider-contents {
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+    .header-bar {
+      height: 50px;
+      padding: 5px;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .logo,
+    .clublogo {
+      height: 50px;
+      width: auto;
+    }
+    .title-image {
+      height: 35px;
+      width: auto;
+    }
+  }
 
 /* Button Container */
-.button-container {
+.button-container2 {
     display: flex;
     justify-content: center;
     align-items: center;
